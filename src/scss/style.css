@@ -1,0 +1,206 @@
+body {
+  background: #FFEBCD;
+  margin: 0 auto;
+  width: 120vh;
+}
+
+.header {
+  background: #DAA520;
+  border-radius: 0.5em;
+}
+.header .header__menu-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.header .header__menu-bar .header__menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 4em;
+}
+.header .header__menu-bar .header__menu .header__logo {
+  height: 3em;
+  width: 3em;
+  border-radius: 22em;
+  background: #E6E6FA;
+}
+.header .header__menu-bar .header__menu .header__nav {
+  background: #F5DEB3;
+  height: 3em;
+  width: 15em;
+  border-radius: 0.5em;
+  border: none;
+  margin-left: 2em;
+}
+.header .header__menu-bar .header__button {
+  background: #F5DEB3;
+  height: 3em;
+  width: 15em;
+  border-radius: 0.5em;
+  border: none;
+}
+
+.container {
+  display: flex;
+}
+.container .aside {
+  flex-grow: 1;
+  background: #FFFACD;
+}
+.container .aside .aside__nav .aside__nav-list {
+  list-style: none;
+  padding: 0;
+}
+.container .aside .aside__nav .aside__nav-list .aside__title {
+  background: #E6E6FA;
+  border: 0.2em solid #DAA520;
+  height: 3.5em;
+  border-radius: 0.7em;
+  margin: 1.5em 1.7em;
+}
+.container .aside .aside__button {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  margin-top: 48em;
+}
+.container .aside .aside__button .aside__button-end {
+  height: 4em;
+  width: 70%;
+  border-radius: 0.7em;
+  background: #E6E6FA;
+  border: 0.2em solid #DAA520;
+  margin: 1em 2em;
+}
+.container .main {
+  flex-grow: 2;
+}
+.container .main .main__general-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #FFD700;
+}
+.container .main .main__general-content .main__single-input {
+  height: 32em;
+  margin: 2em;
+  flex-grow: 5;
+  border: 0.5em solid #4682B4;
+  border-radius: 1.5em;
+  background: #4682B4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container .main .main__general-content .main__single-input .main__input {
+  height: 10%;
+  width: 62%;
+  border-radius: 0.4em;
+  background: #F0E68C;
+  border: none;
+}
+.container .main .main__general-content .main__double-button {
+  height: 32em;
+  margin: 2em;
+  flex-grow: 5;
+  border: 0.5em solid #4682B4;
+  border-radius: 1.5em;
+  background: #4682B4;
+  text-align: center;
+}
+.container .main .main__general-content .main__double-button .main__button-top {
+  background: #F0E68C;
+  border: none;
+  margin: 1em 0;
+  height: 10%;
+  width: 62%;
+  border-radius: 0.4em;
+}
+.container .main .main__general-content .main__double-button .main__button-bottom {
+  background: #F0E68C;
+  border: none;
+  height: 10%;
+  width: 62%;
+  border-radius: 0.4em;
+  position: relative;
+  bottom: -26em;
+}
+.container .main .main__secondary-content {
+  background: #4682B4;
+  padding: 2em;
+}
+.container .main .main__secondary-content .main__img-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 23em;
+  border-radius: 2em;
+  background: #F0E68C;
+}
+.container .main .main__secondary-content .main__img-box .main__img {
+  background: #4682B4;
+  height: 62%;
+  width: 40%;
+  border-radius: 2em;
+}
+.container .main .main__button-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 3em;
+}
+.container .main .main__button-box .main__button-left {
+  height: 14em;
+  flex-grow: 2;
+  border-radius: 2em;
+  background: #FFD700;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+}
+.container .main .main__button-box .main__button-middle {
+  height: 14em;
+  flex-grow: 2;
+  border-radius: 2em;
+  margin: 0 2em;
+  background: #FFD700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container .main .main__button-box .main__button-right {
+  height: 14em;
+  border-radius: 2em;
+  background: #FFD700;
+  flex-grow: 2;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.container .main .main__button-box .main__button {
+  background: #4682B4;
+  border: none;
+  height: 3em;
+  width: 72%;
+  border-radius: 1em;
+  margin: 2em 0;
+}
+
+.footer {
+  background: #DAA520;
+  height: 3em;
+}
+.footer .footer__button-nav {
+  margin: 0 3em;
+  padding-top: 0.4em;
+}
+.footer .footer__button-nav .footer__button {
+  background: #F5DEB3;
+  height: 2.5em;
+  width: 14em;
+  border-radius: 0.5em;
+  border: none;
+}
+
+/*# sourceMappingURL=style.css.map */
