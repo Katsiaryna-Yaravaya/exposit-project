@@ -1,10 +1,10 @@
-@mixin positionBlock($dp, $ali, $jk){
+@mixin positionBlock($dp, $ali, $jk) {
   display: $dp;
   align-items: $ali;
   justify-content: $jk;
 }
 
-@mixin size($hg, $wd, $br){
+@mixin size($hg, $wd, $br) {
   height: $hg;
   width: $wd;
   border-radius: $br;
@@ -19,8 +19,6 @@ $blue: #4682B4;
 $lightBlue: #E6E6FA;
 $coffee: #FFEBCD;
 $lavender: #E6E6FA;
-
-
 
 body {
   background: $coffee;
@@ -191,7 +189,7 @@ body {
         @include positionBlock(flex, flex-end, center);
       }
 
-      .main__button{
+      .main__button {
         background: $blue;
         border: none;
         @include size(3em, 72%, 1em);
@@ -205,7 +203,7 @@ body {
   background: $gold;
   height: 3em;
 
-  .footer__button-nav{
+  .footer__button-nav {
     margin: 0 3em;
     padding-top: 0.4em;
 
@@ -217,3 +215,161 @@ body {
   }
 }
 
+
+
+//------------------------------------------
+//---------------media queries--------------
+//------------------------------------------
+
+
+
+@media (max-width: 56.8em) {
+
+  body {
+    width: 113vh;
+  }
+
+  .header {
+    .header__button {
+      margin-left: 5.4em;
+    }
+  }
+
+  .container {
+
+    .aside {
+      .aside__button {
+        margin-top: 34em;
+      }
+    }
+
+    .main {
+
+      .main__general-content {
+        .main__single-input {
+          height: 23em;
+        }
+        .main__double-button {
+          height: 23em;
+          .main__button-bottom {
+            bottom: -18em;
+          }
+        }
+      }
+
+      .main__secondary-content {
+        .main__img-box {
+          height: 19em;
+        }
+      }
+      .main__button-box {
+        margin-top: 2em;
+      }
+    }
+  }
+
+  .footer {
+    .footer__button-nav {
+      margin: 0 2.5em;
+    }
+  }
+}
+
+@media (max-width: 31.5em) {
+
+  body {
+    width: 61vh;
+  }
+
+  .header {
+
+    .header__menu-bar {
+      flex-direction: column;
+      align-items: baseline;
+      padding-left: 2em;
+      padding-bottom: 1em;
+    }
+    .header__button {
+      margin-left: 5.4em;
+    }
+  }
+
+  .container {
+    flex-direction: column;
+
+    .aside {
+      .aside__nav {
+        .aside__nav-list {
+          .aside__title {
+            border: 0.2em solid #DAA520;
+            height: 2.5em;
+            margin: 1em 6em 0 3em;
+          }
+        }
+      }
+      .aside__button {
+        margin: 1em 7em 0 3em;
+      }
+    }
+
+    .main {
+
+      .main__general-content {
+        flex-direction: column;
+        .main__single-input {
+          width: 15em;
+          height: 20em;
+          .main__input {
+            @include size(5em, 11em, 0.4em);
+          }
+        }
+        .main__double-button {
+          width: 15em;
+          height: 20em;
+          .main__button-top {
+            @include size(5em, 11em, 0.4em);
+          }
+          .main__button-bottom {
+            @include size(5em, 11em, 0.4em);
+            bottom: -9em;
+          }
+        }
+      }
+      .main__secondary-content {
+        .main__img-box {
+          flex-direction: column;
+          width: 20em;
+          margin: auto;
+          height: 23em;
+          .main__img {
+            @include size(10em, 10em, 2em);
+          }
+        }
+      }
+      .main__button-box {
+        margin-top: 2em;
+        flex-direction: column;
+        .main__button-left {
+          width: 11em;
+        }
+        .main__button-middle {
+          width: 11em;
+          margin: 1.5em auto;
+        }
+        .main__button-right {
+          width: 11em;
+        }
+        .main__button {
+          @include size(3em, 72%, 1em);
+          margin: 2em 0;
+        }
+      }
+    }
+  }
+
+  .footer {
+    .footer__button-nav {
+      margin: 0 9.7em;
+    }
+  }
+}

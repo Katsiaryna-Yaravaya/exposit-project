@@ -203,4 +203,126 @@ body {
   border: none;
 }
 
+@media (max-width: 56.8em) {
+  body {
+    width: 113vh;
+  }
+
+  .header .header__button {
+    margin-left: 5.4em;
+  }
+
+  .container .aside .aside__button {
+    margin-top: 34em;
+  }
+  .container .main .main__general-content .main__single-input {
+    height: 23em;
+  }
+  .container .main .main__general-content .main__double-button {
+    height: 23em;
+  }
+  .container .main .main__general-content .main__double-button .main__button-bottom {
+    bottom: -18em;
+  }
+  .container .main .main__secondary-content .main__img-box {
+    height: 19em;
+  }
+  .container .main .main__button-box {
+    margin-top: 2em;
+  }
+
+  .footer .footer__button-nav {
+    margin: 0 2.5em;
+  }
+}
+@media (max-width: 31.5em) {
+  body {
+    width: 61vh;
+  }
+
+  .header .header__menu-bar {
+    flex-direction: column;
+    align-items: baseline;
+    padding-left: 2em;
+    padding-bottom: 1em;
+  }
+  .header .header__button {
+    margin-left: 5.4em;
+  }
+
+  .container {
+    flex-direction: column;
+  }
+  .container .aside .aside__nav .aside__nav-list .aside__title {
+    border: 0.2em solid #DAA520;
+    height: 2.5em;
+    margin: 1em 6em 0 3em;
+  }
+  .container .aside .aside__button {
+    margin: 1em 7em 0 3em;
+  }
+  .container .main .main__general-content {
+    flex-direction: column;
+  }
+  .container .main .main__general-content .main__single-input {
+    width: 15em;
+    height: 20em;
+  }
+  .container .main .main__general-content .main__single-input .main__input {
+    height: 5em;
+    width: 11em;
+    border-radius: 0.4em;
+  }
+  .container .main .main__general-content .main__double-button {
+    width: 15em;
+    height: 20em;
+  }
+  .container .main .main__general-content .main__double-button .main__button-top {
+    height: 5em;
+    width: 11em;
+    border-radius: 0.4em;
+  }
+  .container .main .main__general-content .main__double-button .main__button-bottom {
+    height: 5em;
+    width: 11em;
+    border-radius: 0.4em;
+    bottom: -9em;
+  }
+  .container .main .main__secondary-content .main__img-box {
+    flex-direction: column;
+    width: 20em;
+    margin: auto;
+    height: 23em;
+  }
+  .container .main .main__secondary-content .main__img-box .main__img {
+    height: 10em;
+    width: 10em;
+    border-radius: 2em;
+  }
+  .container .main .main__button-box {
+    margin-top: 2em;
+    flex-direction: column;
+  }
+  .container .main .main__button-box .main__button-left {
+    width: 11em;
+  }
+  .container .main .main__button-box .main__button-middle {
+    width: 11em;
+    margin: 1.5em auto;
+  }
+  .container .main .main__button-box .main__button-right {
+    width: 11em;
+  }
+  .container .main .main__button-box .main__button {
+    height: 3em;
+    width: 72%;
+    border-radius: 1em;
+    margin: 2em 0;
+  }
+
+  .footer .footer__button-nav {
+    margin: 0 9.7em;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
