@@ -28,9 +28,9 @@ body {
 
 .header {
   background: $gold;
-  border-radius: 0.5em;
+  border-radius: .4em;
 
-  .header__menu-bar {
+  &__menu-bar {
     @include positionBlock(flex, center, space-around);
 
     .header__menu {
@@ -44,7 +44,7 @@ body {
 
       .header__nav {
         background: $lightBrown;
-        @include size(3em, 15em, 0.5em);
+        @include size(3em, 15em, .4em);
         border: none;
         margin-left: 2em;
       }
@@ -52,7 +52,7 @@ body {
 
     .header__button {
       background: $lightBrown;
-      @include size(3em, 15em, 0.5em);
+      @include size(3em, 15em, .4em);
       border: none;
     }
   }
@@ -65,29 +65,29 @@ body {
     flex-grow: 1;
     background: $lightYellow;
 
-    .aside__nav {
+    &__nav {
       .aside__nav-list {
         list-style: none;
         padding: 0;
 
         .aside__title {
           background: $lightBlue;
-          border: 0.2em solid $gold;
-          height: 3.5em;
-          border-radius: 0.7em;
-          margin: 1.5em 1.7em;
+          border: .2em solid $gold;
+          height: 3.4em;
+          border-radius: .6em;
+          margin: 1.4em 1.8em;
         }
       }
     }
 
-    .aside__button {
+    &__button {
       @include positionBlock(flex, baseline, center);
       margin-top: 48em;
 
       .aside__button-end {
-        @include size(4em, 70%, 0.7em);
+        @include size(4em, 70%, .6em);
         background: $lightBlue;
-        border: 0.2em solid $gold;
+        border: .2em solid $gold;
         margin: 1em 2em;
       }
     }
@@ -96,7 +96,7 @@ body {
   .main {
     flex-grow: 2;
 
-    .main__general-content {
+    &__general-content {
       @include positionBlock(flex, center, space-between);
       background: $yellow;
 
@@ -104,13 +104,13 @@ body {
         height: 32em;
         margin: 2em;
         flex-grow: 5;
-        border: 0.5em solid $blue;
-        border-radius: 1.5em;
+        border: .5em solid $blue;
+        border-radius: 1.4em;
         background: $blue;
         @include positionBlock(flex, center, center);
 
         .main__input {
-          @include size(10%, 62%, 0.4em);
+          @include size(10%, 62%, .4em);
           background: $brown;
           border: none;
         }
@@ -120,7 +120,7 @@ body {
         height: 32em;
         margin: 2em;
         flex-grow: 5;
-        border: 0.5em solid $blue;
+        border: .4em solid $blue;
         border-radius: 1.5em;
         background: $blue;
         text-align: center;
@@ -129,21 +129,20 @@ body {
           background: $brown;
           border: none;
           margin: 1em 0;
-          @include size(10%, 62%, 0.4em);
+          @include size(10%, 62%, .4em);
         }
 
         .main__button-bottom {
           background: $brown;
           border: none;
-          @include size(10%, 62%, 0.4em);
+          @include size(10%, 62%, .4em);
           position: relative;
           bottom: -26em;
         }
-
       }
     }
 
-    .main__secondary-content {
+    &__secondary-content {
       background: $blue;
       padding: 2em;
 
@@ -160,7 +159,7 @@ body {
       }
     }
 
-    .main__button-box {
+    &__button-box {
       @include positionBlock(flex, center, space-evenly);
       margin-top: 3em;
 
@@ -203,13 +202,13 @@ body {
   background: $gold;
   height: 3em;
 
-  .footer__button-nav {
+  &__button-nav {
     margin: 0 3em;
-    padding-top: 0.4em;
+    padding-top: .4em;
 
     .footer__button {
       background: $lightBrown;
-      @include size(2.5em, 14em, 0.5em);
+      @include size(2.4em, 14em, .4em);
       border: none;
     }
   }
@@ -230,7 +229,7 @@ body {
   }
 
   .header {
-    .header__button {
+    &__button {
       margin-left: 5.4em;
     }
   }
@@ -238,14 +237,13 @@ body {
   .container {
 
     .aside {
-      .aside__button {
+      &__button {
         margin-top: 34em;
       }
     }
 
     .main {
-
-      .main__general-content {
+      &__general-content {
         .main__single-input {
           height: 23em;
         }
@@ -256,40 +254,38 @@ body {
           }
         }
       }
-
-      .main__secondary-content {
+      &__secondary-content {
         .main__img-box {
           height: 19em;
         }
       }
-      .main__button-box {
+      &__button-box {
         margin-top: 2em;
       }
     }
   }
 
   .footer {
-    .footer__button-nav {
-      margin: 0 2.5em;
+    &__button-nav {
+      margin: 0 2.4em;
     }
   }
 }
 
-@media (max-width: 31.5em) {
+@media (max-width: 31.6em) {
 
   body {
     width: 61vh;
   }
 
   .header {
-
-    .header__menu-bar {
+    &__menu-bar {
       flex-direction: column;
       align-items: baseline;
       padding-left: 2em;
       padding-bottom: 1em;
     }
-    .header__button {
+    &__button {
       margin-left: 5.4em;
     }
   }
@@ -298,44 +294,43 @@ body {
     flex-direction: column;
 
     .aside {
-      .aside__nav {
+      &__nav {
         .aside__nav-list {
           .aside__title {
-            border: 0.2em solid #DAA520;
-            height: 2.5em;
+            border: .2em solid #DAA520;
+            height: 2.4em;
             margin: 1em 6em 0 3em;
           }
         }
       }
-      .aside__button {
+      &__button {
         margin: 1em 7em 0 3em;
       }
     }
 
     .main {
-
-      .main__general-content {
+      &__general-content {
         flex-direction: column;
         .main__single-input {
           width: 15em;
           height: 20em;
           .main__input {
-            @include size(5em, 11em, 0.4em);
+            @include size(5em, 11em, .4em);
           }
         }
         .main__double-button {
           width: 15em;
           height: 20em;
           .main__button-top {
-            @include size(5em, 11em, 0.4em);
+            @include size(5em, 11em, .4em);
           }
           .main__button-bottom {
-            @include size(5em, 11em, 0.4em);
+            @include size(5em, 11em, .4em);
             bottom: -9em;
           }
         }
       }
-      .main__secondary-content {
+      &__secondary-content {
         .main__img-box {
           flex-direction: column;
           width: 20em;
@@ -346,7 +341,7 @@ body {
           }
         }
       }
-      .main__button-box {
+      &__button-box {
         margin-top: 2em;
         flex-direction: column;
         .main__button-left {
@@ -354,7 +349,7 @@ body {
         }
         .main__button-middle {
           width: 11em;
-          margin: 1.5em auto;
+          margin: 1.4em auto;
         }
         .main__button-right {
           width: 11em;
@@ -368,8 +363,8 @@ body {
   }
 
   .footer {
-    .footer__button-nav {
-      margin: 0 9.7em;
+    &__button-nav {
+      margin: 0 9.6em;
     }
   }
 }
