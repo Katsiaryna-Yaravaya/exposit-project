@@ -1,0 +1,383 @@
+@mixin positionBlock($dp, $ali, $jk) {
+  display: $dp;
+  align-items: $ali;
+  justify-content: $jk;
+}
+
+@mixin size($hg, $wd, $br) {
+  height: $hg;
+  width: $wd;
+  border-radius: $br;
+}
+
+$yellow: #FFD700;
+$gold: #DAA520;
+$brown: #F0E68C;
+$lightBrown: #F5DEB3;
+$lightYellow: #FFFACD;
+$blue: #4682B4;
+$lightBlue: #E6E6FA;
+$coffee: #FFEBCD;
+$lavender: #E6E6FA;
+
+body {
+  background: $coffee;
+  margin: 0 auto;
+  width: 120vh;
+}
+
+.header {
+  background: $gold;
+  border-radius: .4em;
+
+  &__menu-bar {
+    @include positionBlock(flex, center, space-around);
+
+    .header__menu {
+      @include positionBlock(flex, center, space-between);
+      height: 4em;
+
+      .header__logo {
+        @include size(3em, 3em, 22em);
+        background: $lavender;
+      }
+
+      .header__nav {
+        background: $lightBrown;
+        @include size(3em, 15em, .4em);
+        border: none;
+        margin-left: 2em;
+      }
+    }
+
+    .header__button {
+      background: $lightBrown;
+      @include size(3em, 15em, .4em);
+      border: none;
+    }
+  }
+}
+
+.container {
+  display: flex;
+
+  .aside {
+    flex-grow: 1;
+    background: $lightYellow;
+
+    &__nav-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    &__title {
+      background: $lightBlue;
+      border: .2em solid $gold;
+      height: 3.4em;
+      border-radius: .6em;
+      margin: 1.4em 1.8em;
+    }
+
+    &__button {
+      @include positionBlock(flex, baseline, center);
+      margin-top: 48em;
+    }
+
+    &__button-end {
+      @include size(4em, 70%, .6em);
+      background: $lightBlue;
+      border: .2em solid $gold;
+      margin: 1em 2em;
+    }
+  }
+
+  .main {
+    flex-grow: 2;
+
+    &__general-content {
+      @include positionBlock(flex, center, space-between);
+      background: $yellow;
+
+      .main__input-container {
+        height: 32em;
+        margin: 2em;
+        flex-grow: 5;
+        border: .5em solid $blue;
+        border-radius: 1.4em;
+        background: $blue;
+        @include positionBlock(flex, center, center);
+
+        .main__input {
+          @include size(10%, 62%, .4em);
+          background: $brown;
+          border: none;
+        }
+      }
+
+      .main__double-button {
+        height: 32em;
+        margin: 2em;
+        flex-grow: 5;
+        border: .4em solid $blue;
+        border-radius: 1.5em;
+        background: $blue;
+        text-align: center;
+
+        .main__button-top {
+          background: $brown;
+          border: none;
+          margin: 1em 0;
+          @include size(10%, 62%, .4em);
+        }
+
+        .main__button-bottom {
+          background: $brown;
+          border: none;
+          @include size(10%, 62%, .4em);
+          position: relative;
+          bottom: -26em;
+        }
+      }
+    }
+
+    &__secondary-content {
+      background: $blue;
+      padding: 2em;
+
+      .main__img-box {
+        @include positionBlock(flex, center, space-around);
+        height: 23em;
+        border-radius: 2em;
+        background: $brown;
+
+        .main__img {
+          background: $blue;
+          @include size(62%, 40%, 2em);
+        }
+      }
+    }
+
+    &__button-box {
+      @include positionBlock(flex, center, space-evenly);
+      margin-top: 3em;
+
+      .main__button-left {
+        height: 14em;
+        flex-grow: 2;
+        border-radius: 2em;
+        background: $yellow;
+        @include positionBlock(flex, baseline, center);
+      }
+
+      .main__button-middle {
+        height: 14em;
+        flex-grow: 2;
+        border-radius: 2em;
+        margin: 0 2em;
+        background: $yellow;
+        @include positionBlock(flex, center, center);
+      }
+
+      .main__button-right {
+        height: 14em;
+        border-radius: 2em;
+        background: $yellow;
+        flex-grow: 2;
+        @include positionBlock(flex, flex-end, center);
+      }
+
+      .main__button {
+        background: $blue;
+        border: none;
+        @include size(3em, 72%, 1em);
+        margin: 2em 0;
+      }
+    }
+  }
+}
+
+.footer {
+  background: $gold;
+  height: 3em;
+
+  &__button-nav {
+    margin: 0 3em;
+    padding-top: .4em;
+
+    .footer__button {
+      background: $lightBrown;
+      @include size(2.4em, 14em, .4em);
+      border: none;
+    }
+  }
+}
+
+
+//------------------------------------------
+//---------------media queries--------------
+//------------------------------------------
+
+
+@media (max-width: 56.8em) {
+
+  body {
+    width: 113vh;
+  }
+
+  .header {
+    &__button {
+      margin-left: 5.4em;
+    }
+  }
+
+  .container {
+
+    .aside {
+      &__button {
+        margin-top: 34em;
+      }
+    }
+
+    .main {
+
+      &__general-content {
+
+        .main__input-container,
+        .main__double-button {
+          height: 23em;
+
+          .main__button-bottom {
+            bottom: -18em;
+          }
+        }
+      }
+
+      &__secondary-content {
+        .main__img-box {
+          height: 19em;
+        }
+      }
+
+      &__button-box {
+        margin-top: 2em;
+      }
+    }
+  }
+
+  .footer {
+    &__button-nav {
+      margin: 0 2.4em;
+    }
+  }
+}
+
+@media (max-width: 31.6em) {
+
+  body {
+    width: 61vh;
+  }
+
+  .header {
+    &__menu-bar {
+      flex-direction: column;
+      align-items: baseline;
+      padding-left: 2em;
+      padding-bottom: 1em;
+    }
+
+    &__button {
+      margin-left: 5.4em;
+    }
+  }
+
+  .container {
+    flex-direction: column;
+
+    .aside {
+      &__nav {
+        .aside__nav-list {
+          .aside__title {
+            border: .2em solid #DAA520;
+            height: 2.4em;
+            margin: 1em 6em 0 3em;
+          }
+        }
+      }
+
+      &__button {
+        margin: 1em 7em 0 3em;
+      }
+    }
+
+    .main {
+      &__general-content {
+        flex-direction: column;
+
+        .main__input-container {
+          width: 15em;
+          height: 20em;
+
+          .main__input {
+            @include size(5em, 11em, .4em);
+          }
+        }
+
+        .main__double-button {
+          width: 15em;
+          height: 20em;
+
+          .main__button-top {
+            @include size(5em, 11em, .4em);
+          }
+
+          .main__button-bottom {
+            @include size(5em, 11em, .4em);
+            bottom: -9em;
+          }
+        }
+      }
+
+      &__secondary-content {
+        .main__img-box {
+          flex-direction: column;
+          width: 20em;
+          margin: auto;
+          height: 23em;
+
+          .main__img {
+            @include size(10em, 10em, 2em);
+          }
+        }
+      }
+
+      &__button-box {
+        margin-top: 2em;
+        flex-direction: column;
+
+        .main__button-left {
+          width: 11em;
+        }
+
+        .main__button-middle {
+          width: 11em;
+          margin: 1.4em auto;
+        }
+
+        .main__button-right {
+          width: 11em;
+        }
+
+        .main__button {
+          @include size(3em, 72%, 1em);
+          margin: 2em 0;
+        }
+      }
+    }
+  }
+
+  .footer {
+    &__button-nav {
+      margin: 0 9.6em;
+    }
+  }
+}
