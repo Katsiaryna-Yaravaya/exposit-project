@@ -65,31 +65,29 @@ body {
     flex-grow: 1;
     background: $lightYellow;
 
-    &__nav {
-      .aside__nav-list {
-        list-style: none;
-        padding: 0;
+    &__nav-list {
+      list-style: none;
+      padding: 0;
+    }
 
-        .aside__title {
-          background: $lightBlue;
-          border: .2em solid $gold;
-          height: 3.4em;
-          border-radius: .6em;
-          margin: 1.4em 1.8em;
-        }
-      }
+    &__title {
+      background: $lightBlue;
+      border: .2em solid $gold;
+      height: 3.4em;
+      border-radius: .6em;
+      margin: 1.4em 1.8em;
     }
 
     &__button {
       @include positionBlock(flex, baseline, center);
       margin-top: 48em;
+    }
 
-      .aside__button-end {
-        @include size(4em, 70%, .6em);
-        background: $lightBlue;
-        border: .2em solid $gold;
-        margin: 1em 2em;
-      }
+    &__button-end {
+      @include size(4em, 70%, .6em);
+      background: $lightBlue;
+      border: .2em solid $gold;
+      margin: 1em 2em;
     }
   }
 
@@ -100,7 +98,7 @@ body {
       @include positionBlock(flex, center, space-between);
       background: $yellow;
 
-      .main__single-input {
+      .main__input-container {
         height: 32em;
         margin: 2em;
         flex-grow: 5;
@@ -215,11 +213,9 @@ body {
 }
 
 
-
 //------------------------------------------
 //---------------media queries--------------
 //------------------------------------------
-
 
 
 @media (max-width: 56.8em) {
@@ -243,22 +239,25 @@ body {
     }
 
     .main {
+
       &__general-content {
-        .main__single-input {
-          height: 23em;
-        }
+
+        .main__input-container,
         .main__double-button {
           height: 23em;
+
           .main__button-bottom {
             bottom: -18em;
           }
         }
       }
+
       &__secondary-content {
         .main__img-box {
           height: 19em;
         }
       }
+
       &__button-box {
         margin-top: 2em;
       }
@@ -285,6 +284,7 @@ body {
       padding-left: 2em;
       padding-bottom: 1em;
     }
+
     &__button {
       margin-left: 5.4em;
     }
@@ -303,6 +303,7 @@ body {
           }
         }
       }
+
       &__button {
         margin: 1em 7em 0 3em;
       }
@@ -311,49 +312,61 @@ body {
     .main {
       &__general-content {
         flex-direction: column;
-        .main__single-input {
+
+        .main__input-container {
           width: 15em;
           height: 20em;
+
           .main__input {
             @include size(5em, 11em, .4em);
           }
         }
+
         .main__double-button {
           width: 15em;
           height: 20em;
+
           .main__button-top {
             @include size(5em, 11em, .4em);
           }
+
           .main__button-bottom {
             @include size(5em, 11em, .4em);
             bottom: -9em;
           }
         }
       }
+
       &__secondary-content {
         .main__img-box {
           flex-direction: column;
           width: 20em;
           margin: auto;
           height: 23em;
+
           .main__img {
             @include size(10em, 10em, 2em);
           }
         }
       }
+
       &__button-box {
         margin-top: 2em;
         flex-direction: column;
+
         .main__button-left {
           width: 11em;
         }
+
         .main__button-middle {
           width: 11em;
           margin: 1.4em auto;
         }
+
         .main__button-right {
           width: 11em;
         }
+
         .main__button {
           @include size(3em, 72%, 1em);
           margin: 2em 0;

@@ -48,11 +48,11 @@ body {
   flex-grow: 1;
   background: #FFFACD;
 }
-.container .aside__nav .aside__nav-list {
+.container .aside__nav-list {
   list-style: none;
   padding: 0;
 }
-.container .aside__nav .aside__nav-list .aside__title {
+.container .aside__title {
   background: #E6E6FA;
   border: 0.2em solid #DAA520;
   height: 3.4em;
@@ -65,7 +65,7 @@ body {
   justify-content: center;
   margin-top: 48em;
 }
-.container .aside__button .aside__button-end {
+.container .aside__button-end {
   height: 4em;
   width: 70%;
   border-radius: 0.6em;
@@ -82,7 +82,7 @@ body {
   justify-content: space-between;
   background: #FFD700;
 }
-.container .main__general-content .main__single-input {
+.container .main__general-content .main__input-container {
   height: 32em;
   margin: 2em;
   flex-grow: 5;
@@ -93,7 +93,7 @@ body {
   align-items: center;
   justify-content: center;
 }
-.container .main__general-content .main__single-input .main__input {
+.container .main__general-content .main__input-container .main__input {
   height: 10%;
   width: 62%;
   border-radius: 0.4em;
@@ -215,13 +215,12 @@ body {
   .container .aside__button {
     margin-top: 34em;
   }
-  .container .main__general-content .main__single-input {
+  .container .main__general-content .main__input-container,
+.container .main__general-content .main__double-button {
     height: 23em;
   }
-  .container .main__general-content .main__double-button {
-    height: 23em;
-  }
-  .container .main__general-content .main__double-button .main__button-bottom {
+  .container .main__general-content .main__input-container .main__button-bottom,
+.container .main__general-content .main__double-button .main__button-bottom {
     bottom: -18em;
   }
   .container .main__secondary-content .main__img-box {
@@ -235,7 +234,7 @@ body {
     margin: 0 2.4em;
   }
 }
-@media (max-width: 31.5em) {
+@media (max-width: 31.6em) {
   body {
     width: 61vh;
   }
@@ -264,11 +263,11 @@ body {
   .container .main__general-content {
     flex-direction: column;
   }
-  .container .main__general-content .main__single-input {
+  .container .main__general-content .main__input-container {
     width: 15em;
     height: 20em;
   }
-  .container .main__general-content .main__single-input .main__input {
+  .container .main__general-content .main__input-container .main__input {
     height: 5em;
     width: 11em;
     border-radius: 0.4em;
